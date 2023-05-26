@@ -5,7 +5,7 @@ const onSubmit = async(event)=> {
 }
 
 const generateResponse = async()=>{
-    let resGenerater = await fetch('http://localhost:3000//planner', {
+    const resGenerater = await fetch('http://localhost:3000/planner', {
         method: 'POST',
         headers: { 'Content-Type' : 'application/json'},
         body: new FormData(formElem)

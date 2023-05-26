@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const generate = require("./generate.js");
+import express from "express";
+import cors from "cors";
+import generate from "./generate.js";
 
 
 const app = express();
@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
 
 app.post("/planner", async(req, res) => {
     const conditions = req.body;
+    console.log(conditions);
     try {
         const response = await generate(conditions);
         res.json({response: response});

@@ -1,4 +1,4 @@
-const openaiClient = require('./api.js') ;
+import openaiClient from './api.js' ;
 
 const generate = async(conditions) => {
   const response = await openaiClient.createCompletion({
@@ -11,4 +11,4 @@ const generate = async(conditions) => {
   return response.data.choices[0].text;
 }
 
-exports.generate = generate;
+export default generate;
