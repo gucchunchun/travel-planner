@@ -3,15 +3,15 @@
 <head>
   <title>Travel Planner /World var.</title>
   <meta charset="utf-8" />
-  <meta lang="en" content>
-  <link href="css/select2.min.css" rel="stylesheet" />
+  <meta lang="en"/>
+  <link href="/css/select2.min.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/select2.min.js"></script>
-  <script src="index.js"></script>
+  <script src="/js/select2.min.js"></script>
+  <script src="/js/index.js"></script>
 </head>
 <body>
   <h1>Travel Planner</h1>
-  <form method="post" action="/plan">
+  <form id="formElem">
     <!-- can get current place from system? -->
     <div class="form-devition">
     <label for="country-select">Where are you now?</label>
@@ -339,7 +339,7 @@
       <input type="checkbox" name="travel-companions" value="other"> Other
     </label><br>
     </div>
-    <input type="submit" value="Make a plan!">
+    <input type="submit" value="Make a plan!" onclick="onSubmit()">
   </form>
 
   <script class="select2">
