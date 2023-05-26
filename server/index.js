@@ -8,7 +8,8 @@ const app = express();
 app.use(cors());
 // middleware to read request objects
 app.use(express.urlencoded({extended: true}));
-app.use(express.static('./client'));
+app.use(express.static('/Users/yuna/Documents/GitHub/travel-planner/client'));
+console.log(__dirname);
 
 const port = process.env.PORT || 3000;
 
