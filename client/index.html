@@ -11,7 +11,7 @@
 </head>
 <body>
   <h1>Travel Planner</h1>
-  <form id="formElem">
+  <form id="formElem" onsubmit="onSubmit(event)">
     <!-- can get current place from system? -->
     <div class="form-devition">
     <label for="country-select">Where are you now?</label>
@@ -339,7 +339,7 @@
       <input type="checkbox" name="travel-companions" value="other"> Other
     </label><br>
     </div>
-    <input type="submit" value="Make a plan!" onclick="onSubmit()">
+    <input type="submit" value="Make a plan!">
   </form>
 
   <script class="select2">

@@ -1,6 +1,5 @@
 const onSubmit = async(event)=> {
     event.preventDefault();   
-
     const generatedPlan = await generateResponse();
     console.log(generatedPlan);
 }
