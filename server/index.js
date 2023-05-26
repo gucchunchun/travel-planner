@@ -5,8 +5,6 @@ const generate = require("./generate.js");
 
 const app = express();
 
-
-
 app.use(cors());
 // middleware to read request objects
 app.use(express.urlencoded({extended: true}));
