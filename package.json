@@ -1,0 +1,25 @@
+{
+  "name": "travel-planner",
+  "version": "1.0.0",
+  "description": "travel planner app with chatGPT API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gucchunchun/travel-planner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gucchunchun/travel-planner/issues"
+  },
+  "homepage": "https://github.com/gucchunchun/travel-planner#readme",
+  "dependencies": {
+    "@selectize/selectize": "^0.15.2",
+    "jquery": "^3.7.0",
+    "select2": "^4.1.0-rc.0"
+  }
+}

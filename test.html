@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>aaa</title>
+    <meta chars="utf-8" />
+    <meta lang="en" />
+</head>
+<body>
+ <form>
+    <select id="what">
+        <option value="2">2</option>
+        <option value=""><input type="text" id="selector" onchange="selectOption()"></option>
+
+    </select>
+ </form>
+ <script type="text/javascript">
+    const options = ["hoge", "fuge", "doge", "koge"];
+    const selectTag = document.querySelector("select");
+
+    for(option in options){
+        let newOption = document.createElement("option");
+        newOption.value = options[option];
+        newOption.innerHTML = options[option];
+        console.log(selectTag)
+        selectTag.appendChild(newOption);
+    }
+
+    // function selectOption() {
+    //     let inputBox = document.querySelectorId("selector");
+    //     let inputText = inputBox.value;
+
+    //     const options = document.
+    // }
+ </script>
+</body>
+</html>
