@@ -1,12 +1,12 @@
 let conditions = {};
 
 const onSubmit = async(event)=> {
+    // defaultのsubmitイベントを停止
     event.preventDefault();   
     const formData = new FormData(event.target);
     let prev
+    // formdataはそのままではアクセス不可能なのでobject形式へ
     for(var pair of formData.entries()) {
-        // console.log(pair[0]+ ', '+ pair[1]);
-        // console.log(typeof pair[0]);
         if(pair[0]==prev){       
             const temp = conditions[prev];
             conditions[prev] =[temp,pair[1]];
@@ -20,13 +20,12 @@ const onSubmit = async(event)=> {
     let addUnit = tmp + "K japanese-yen";
     conditions.budget = addUnit;
 
-    console.log(JSON.stringify(conditions));
-
     const generatedPlan = await generateResponse();
     console.log(generatedPlan);
 }
 
 const generateResponse = async()=>{
+    // ローカルサーバーにユーザーのインプット（条件）をPOSTする
     const resGenerater = await fetch('http://localhost:3000/planner', {
         method: 'POST',
         headers: { 'Content-Type' : 'application/json'},

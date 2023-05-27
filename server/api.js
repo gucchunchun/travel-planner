@@ -15,3 +15,5 @@ const configuration = new Configuration({
 const openaiClient = new OpenAIApi(configuration);
 
 export default openaiClient;
+
+// openaiのAPIを利用できるように設定

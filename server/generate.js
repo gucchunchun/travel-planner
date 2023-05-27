@@ -7,12 +7,10 @@ const generate = async(conditionsJSON) => {
     conditions+= key + ": " 
     conditions+= parse_data[key] + ", " 
   }
-  console.log(conditions);
-
   const response = await openaiClient.createCompletion({
     model: "text-davinci-003",
-    prompt: conditions + `Suggest an geographically efficienttravel plan of Japan with above conditions. Response should be JSON formatted with Key of day number. For each values, make a array with keys(visiting-place, activities, typical-food).`,
-    max_tokens: 4000,
+    prompt: conditions + `Suggest an geographically efficienttravel plan of Japan with above conditions. Response should be JSON formatted with Key of day number. For each values, make a array with keys(visiting-city, visiting-place, trasnportation, transport-fee, transport-time, what-to-do, typical-food). what-to-do value should be a array of activities name and the costs`,
+    max_tokens: 3500,
     temperature: 0.4,
   })
 
@@ -22,6 +20,9 @@ const generate = async(conditionsJSON) => {
 export default generate;
 
 
-// there is rimiting for number of tocken per minutes. thats the reason of the errors, I believe.
-//https://platform.openai.com/docs/guides/rate-limits/overview
+
+// openaiのAPIを用いて旅行プランと建ててくれるAPIを作る
+
+// 個人的にどハマりしてしまったのは13行目のトークン。このトークンは解答用の量を示す。4000トークンに設定していた時、質問量が多くなると理由のわからないサーバーエラーが起こってしまって困った↓ エラーはすぐに読む○
+// message: "This model's maximum context length is 4097 tokens, however you requested 4098 tokens (98 in your prompt; 4000 for the completion). Please reduce your prompt; or completion length."
 
