@@ -14,287 +14,155 @@
   <form id="formElem" onsubmit="onSubmit(event)">
     <!-- can get current place from system? -->
     <div class="form-devition">
-    <label for="country-select">Where are you now?</label>
-    <select class="select_search" id="country-select" name="country">
-              <option value="">Select a country</option>
-              <option value="AF">Afghanistan</option>
-              <option value="AL">Albania</option>
-              <option value="DZ">Algeria</option>
-              <option value="AD">Andorra</option>
-              <option value="AO">Angola</option>
-              <option value="AI">Anguilla</option>
-              <option value="AG">Antigua and Barbuda</option>
-              <option value="AR">Argentina</option>
-              <option value="AM">Armenia</option>
-              <option value="AW">Aruba</option>
-              <option value="AU">Australia</option>
-              <option value="AT">Austria</option>
-              <option value="AZ">Azerbaijan</option>
-              <option value="BS">Bahamas</option>
-              <option value="BH">Bahrain</option>
-              <option value="BD">Bangladesh</option>
-              <option value="BB">Barbados</option>
-              <option value="BY">Belarus</option>
-              <option value="BE">Belgium</option>
-              <option value="BZ">Belize</option>
-              <option value="BJ">Benin</option>
-              <option value="BM">Bermuda</option>
-              <option value="BT">Bhutan</option>
-              <option value="BO">Bolivia</option>
-              <option value="BA">Bosnia and Herzegovina</option>
-              <option value="BW">Botswana</option>
-              <option value="BR">Brazil</option>
-              <option value="VG">British Virgin Islands</option>
-              <option value="BN">Brunei</option>
-              <option value="BG">Bulgaria</option>
-              <option value="BF">Burkina Faso</option>
-              <option value="BI">Burundi</option>
-              <option value="KH">Cambodia</option>
-              <option value="CM">Cameroon</option>
-              <option value="CA">Canada</option>
-              <option value="CV">Cape Verde</option>
-              <option value="KY">Cayman Islands</option>
-              <option value="CF">Central African Republic</option>
-              <option value="TD">Chad</option>
-              <option value="CL">Chile</option>
-              <option value="CN">China</option>
-              <option value="CO">Colombia</option>
-              <option value="KM">Comoros</option>
-              <option value="CG">Congo - Brazzaville</option>
-              <option value="CD">Congo - Kinshasa</option>
-              <option value="CK">Cook Islands</option>
-              <option value="CR">Costa Rica</option>
-              <option value="HR">Croatia</option>
-              <option value="CU">Cuba</option>
-              <option value="CY">Cyprus</option>
-              <option value="CZ">Czech Republic</option>
-              <option value="DK">Denmark</option>
-              <option value="DJ">Djibouti</option>
-              <option value="DM">Dominica</option>
-              <option value="DO">Dominican Republic</option>
-              <option value="EC">Ecuador</option>
-              <option value="EG">Egypt</option>
-              <option value="SV">El Salvador</option>
-              <option value="GQ">Equatorial Guinea</option>
-              <option value="ER">Eritrea</option>
-              <option value="EE">Estonia</option>
-              <option value="ET">Ethiopia</option>
-              <option value="FK">Falkland Islands</option>
-              <option value="FO">Faroe Islands</option>
-              <option value="FJ">Fiji</option>
-              <option value="FI">Finland</option>
-              <option value="FR">France</option>
-              <option value="GF">French Guiana</option>
-              <option value="PF">French Polynesia</option>
-              <option value="GA">Gabon</option>
-              <option value="GM">Gambia</option>
-              <option value="GE">Georgia</option>
-              <option value="DE">Germany</option>
-              <option value="GH">Ghana</option>
-              <option value="GI">Gibraltar</option>
-              <option value="GR">Greece</option>
-              <option value="GL">Greenland</option>
-              <option value="GD">Grenada</option>
-              <option value="GP">Guadeloupe</option>
-              <option value="GT">Guatemala</option>
-              <option value="GN">Guinea</option>
-              <option value="GW">Guinea-Bissau</option>
-              <option value="GY">Guyana</option>
-              <option value="HT">Haiti</option>
-              <option value="HN">Honduras</option>
-              <option value="HK">Hong Kong SAR China</option>
-              <option value="HU">Hungary</option>
-              <option value="IS">Iceland</option>
-              <option value="IN">India</option>
-              <option value="ID">Indonesia</option>
-              <option value="IR">Iran</option>
-              <option value="IQ">Iraq</option>
-              <option value="IE">Ireland</option>
-              <option value="IM">Isle of Man</option>
-              <option value="IL">Israel</option>
-              <option value="IT">Italy</option>
-              <option value="CI">Ivory Coast</option>
-              <option value="JM">Jamaica</option>
-              <option value="JP">Japan</option>
-              <option value="JO">Jordan</option>
-              <option value="KZ">Kazakhstan</option>
-              <option value="KE">Kenya</option>
-              <option value="KI">Kiribati</option>
-              <option value="KW">Kuwait</option>
-              <option value="KG">Kyrgyzstan</option>
-              <option value="LA">Laos</option>
-              <option value="LV">Latvia</option>
-              <option value="LB">Lebanon</option>
-              <option value="LS">Lesotho</option>
-              <option value="LR">Liberia</option>
-              <option value="LY">Libya</option>
-              <option value="LI">Liechtenstein</option>
-              <option value="LT">Lithuania</option>
-              <option value="LU">Luxembourg</option>
-              <option value="MO">Macau SAR China</option>
-              <option value="MK">Macedonia</option>
-              <option value="MG">Madagascar</option>
-              <option value="MW">Malawi</option>
-              <option value="MY">Malaysia</option>
-              <option value="MV">Maldives</option>
-              <option value="ML">Mali</option>
-              <option value="MT">Malta</option>
-              <option value="MH">Marshall Islands</option>
-              <option value="MQ">Martinique</option>
-              <option value="MR">Mauritania</option>
-              <option value="MU">Mauritius</option>
-              <option value="YT">Mayotte</option>
-              <option value="MX">Mexico</option>
-              <option value="FM">Micronesia</option>
-              <option value="MD">Moldova</option>
-              <option value="MC">Monaco</option>
-              <option value="MN">Mongolia</option>
-              <option value="ME">Montenegro</option>
-              <option value="MS">Montserrat</option>
-              <option value="MA">Morocco</option>
-              <option value="MZ">Mozambique</option>
-              <option value="MM">Myanmar (Burma)</option>
-              <option value="NA">Namibia</option>
-              <option value="NR">Nauru</option>
-              <option value="NP">Nepal</option>
-              <option value="NL">Netherlands</option>
-              <option value="NC">New Caledonia</option>
-              <option value="NZ">New Zealand</option>
-              <option value="NI">Nicaragua</option>
-              <option value="NE">Niger</option>
-              <option value="NG">Nigeria</option>
-              <option value="NU">Niue</option>
-              <option value="NF">Norfolk Island</option>
-              <option value="KP">North Korea</option>
-              <option value="NO">Norway</option>
-              <option value="OM">Oman</option>
-              <option value="PK">Pakistan</option>
-              <option value="PS">Palestinian Territories</option>
-              <option value="PA">Panama</option>
-              <option value="PG">Papua New Guinea</option>
-              <option value="PY">Paraguay</option>
-              <option value="PE">Peru</option>
-              <option value="PH">Philippines</option>
-              <option value="PN">Pitcairn Islands</option>
-              <option value="PL">Poland</option>
-              <option value="PT">Portugal</option>
-              <option value="QA">Qatar</option>
-              <option value="RE">Réunion</option>
-              <option value="RO">Romania</option>
-              <option value="RU">Russia</option>
-              <option value="RW">Rwanda</option>
-              <option value="WS">Samoa</option>
-              <option value="SM">San Marino</option>
-              <option value="ST">São Tomé and Príncipe</option>
-              <option value="SA">Saudi Arabia</option>
-              <option value="SN">Senegal</option>
-              <option value="RS">Serbia</option>
-              <option value="SC">Seychelles</option>
-              <option value="SL">Sierra Leone</option>
-              <option value="SG">Singapore</option>
-              <option value="SK">Slovakia</option>
-              <option value="SI">Slovenia</option>
-              <option value="SB">Solomon Islands</option>
-              <option value="SO">Somalia</option>
-              <option value="ZA">South Africa</option>
-              <option value="KR">South Korea</option>
-              <option value="ES">Spain</option>
-              <option value="LK">Sri Lanka</option>
-              <option value="BL">St. Barthélemy</option>
-              <option value="SH">St. Helena</option>
-              <option value="KN">St. Kitts and Nevis</option>
-              <option value="LC">St. Lucia</option>
-              <option value="MF">St. Martin</option>
-              <option value="PM">St. Pierre and Miquelon</option>
-              <option value="VC">St. Vincent and Grenadines</option>
-              <option value="SD">Sudan</option>
-              <option value="SR">Suriname</option>
-              <option value="SZ">Swaziland</option>
-              <option value="SE">Sweden</option>
-              <option value="CH">Switzerland</option>
-              <option value="SY">Syria</option>
-              <option value="TW">Taiwan</option>
-              <option value="TJ">Tajikistan</option>
-              <option value="TZ">Tanzania</option>
-              <option value="TH">Thailand</option>
-              <option value="TL">Timor-Leste</option>
-              <option value="TG">Togo</option>
-              <option value="TK">Tokelau</option>
-              <option value="TO">Tonga</option>
-              <option value="TT">Trinidad and Tobago</option>
-              <option value="TN">Tunisia</option>
-              <option value="TR">Turkey</option>
-              <option value="TM">Turkmenistan</option>
-              <option value="TC">Turks and Caicos Islands</option>
-              <option value="TV">Tuvalu</option>
-              <option value="UG">Uganda</option>
-              <option value="UA">Ukraine</option>
-              <option value="AE">United Arab Emirates</option>
-              <option value="GB">United Kingdom</option>
-              <option value="US">United States</option>
-              <option value="UY">Uruguay</option>
-              <option value="UZ">Uzbekistan</option>
-              <option value="VU">Vanuatu</option>
-              <option value="VA">Vatican City</option>
-              <option value="VE">Venezuela</option>
-              <option value="VN">Vietnam</option>
-              <option value="WF">Wallis and Futuna</option>
-              <option value="EH">Western Sahara</option>
-              <option value="YE">Yemen</option>
-              <option value="ZM">Zambia</option>
-              <option value="ZW">Zimbabwe</option>
+    <label for="prefecture-select">Which prefecture are you departing from?</label>
+    <select class="select_search" id="prefecture-select" name="departPrefecture">
+      <option value="">Select a prefecture</option>
+      <option value="hokkaido">Hokkaido</option>
+      <option value="aomori">Aomori</option>
+      <option value="iwate">Iwate</option>
+      <option value="miyagi">Miyagi</option>
+      <option value="akita">Akita</option>
+      <option value="yamagata">Yamagata</option>
+      <option value="fukushima">Fukushima</option>
+      <option value="ibaraki">Ibaraki</option>
+      <option value="tochigi">Tochigi</option>
+      <option value="gunma">Gunma</option>
+      <option value="saitama">Saitama</option>
+      <option value="chiba">Chiba</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="kanagawa">Kanagawa</option>
+      <option value="niigata">Niigata</option>
+      <option value="toyama">Toyama</option>
+      <option value="ishikawa">Ishikawa</option>
+      <option value="fukui">Fukui</option>
+      <option value="yamanashi">Yamanashi</option>
+      <option value="nagano">Nagano</option>
+      <option value="gifu">Gifu</option>
+      <option value="shizuoka">Shizuoka</option>
+      <option value="aichi">Aichi</option>
+      <option value="mie">Mie</option>
+      <option value="shiga">Shiga</option>
+      <option value="kyoto">Kyoto</option>
+      <option value="osaka">Osaka</option>
+      <option value="hyogo">Hyogo</option>
+      <option value="nara">Nara</option>
+      <option value="wakayama">Wakayama</option>
+      <option value="tottori">Tottori</option>
+      <option value="shimane">Shimane</option>
+      <option value="okayama">Okayama</option>
+      <option value="hiroshima">Hiroshima</option>
+      <option value="yamaguchi">Yamaguchi</option>
+      <option value="tokushima">Tokushima</option>
+      <option value="kagawa">Kagawa</option>
+      <option value="ehime">Ehime</option>
+      <option value="kochi">Kochi</option>
+      <option value="fukuoka">Fukuoka</option>
+      <option value="saga">Saga</option>
+      <option value="nagasaki">Nagasaki</option>
+      <option value="kumamoto">Kumamoto</option>
+      <option value="oita">Oita</option>
+      <option value="miyazaki">Miyazaki</option>
+      <option value="kagoshima">Kagoshima</option>
+      <option value="okinawa">Okinawa</option>
     </select>
     </div>
-    <div class="form-devition">
-    <p for="destination-select">What is your ideal travel destination like?</p>
+    <div class="form-devition" id="checkboxgroup1">
+    <p>What is your ideal travel destination like?</p>
       <label>
-          <input type="checkbox" name="destination" value="serene"> Serene
+          <input type="checkbox" name="destinationIsLike" value="serene"> Serene
       </label>
       <label>
-          <input type="checkbox" name="destination" value="adventurous"> Adventurous
+          <input type="checkbox" name="destinationIsLike" value="adventurous"> Adventurous
       </label>
       <label>
-          <input type="checkbox" name="destination" value="vibrant"> Vibrant
+          <input type="checkbox" name="destinationIsLike" value="vibrant"> Vibrant
       </label>
       <label>
-          <input type="checkbox" name="destination" value="exotic"> Exotic
+          <input type="checkbox" name="destinationIsLike" value="exotic"> Exotic
       </label>
       <label>
-          <input type="checkbox" name="destination" value="picturesque"> Picturesque
+          <input type="checkbox" name="destinationIsLike" value="picturesque"> Picturesque
       </label>
       <label>
-          <input type="checkbox" name="destination" value="lively"> Lively
+          <input type="checkbox" name="destinationIsLike" value="lively"> Lively
       </label>
       <label>
-          <input type="checkbox" name="destination" value="scenic"> Scenic
+          <input type="checkbox" name="destinationIsLike" value="scenic"> Scenic
       </label>
       <br>
       <label>
-          <input type="checkbox" name="destination" value="charming"> Charming
+          <input type="checkbox" name="destinationIsLike" value="charming"> Charming
       </label>
       <label>
-          <input type="checkbox" name="destination" value="tranquil"> Tranquil
+          <input type="checkbox" name="destinationIsLike" value="tranquil"> Tranquil
       </label>
       <label>
-          <input type="checkbox" name="destination" value="cultural"> Cultural
+          <input type="checkbox" name="destinationIsLike" value="cultural"> Cultural
       </label>
       <label>
-          <input type="checkbox" name="destination" value="historic"> Historic
+          <input type="checkbox" name="destinationIsLike" value="historic"> Historic
       </label>
       <label>
-          <input type="checkbox" name="destination" value="coastal"> Coastal
+          <input type="checkbox" name="destinationIsLike" value="coastal"> Coastal
       </label>
       <label>
-          <input type="checkbox" name="destination" value="thrilling"> Thrilling
+          <input type="checkbox" name="destinationIsLike" value="thrilling"> Thrilling
       </label>
       <label>
-          <input type="checkbox" name="destination" value="remote"> Remote
+          <input type="checkbox" name="destinationIsLike" value="remote"> Remote
       </label>
       <label>
-          <input type="checkbox" name="destination" value="majestic"> Majestic
+          <input type="checkbox" name="destinationIsLike" value="majestic"> Majestic
       </label>
     </div>
-
+    <div class="form-devition" id="checkboxgroup2">
+      <p>What activities do you want to do?</p>
+      <label>
+        <input type="checkbox" name="activity" value="sightseeing"> Sightseeing
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="hiking"> Hiking
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="beach"> Beach activities
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="cultural"> Cultural experiences
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="food"> Food and culinary exploration
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="adventureSports"> Adventure sports
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="shopping"> Shopping
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="relaxation"> Relaxation and spa
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="wildlife"> Wildlife and nature exploration
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="historicalTours"> Historical tours
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="waterSports"> Water sports
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="photography"> Photography and scenic views
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="festivals"> Attend local festivals/events
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="museums"> Visit museums and art galleries
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="outdoor"> Outdoor activities
+      </label>
+    </div>
     <div class="form-devition">
     <p>How long will your trip be?</p>
     <label>
@@ -309,16 +177,16 @@
     </div>
 
     <div class="form-devition">
-    <label for="budget">What is your budget for this trip?<br>
-    <input type="range" min="0" max="100" value="50" step="1" list="markers" id="budget" name="budget"></label>
-    <output id="budgetOutput"></output>
-    <datalist id="markers">
-      <option value="¥0K" label="0K"></option>
-      <option value="¥25K" label="25K"></option>
-      <option value="¥50K" label="50K"></option>
-      <option value="¥75K" label="75K"></option>
-      <option value="¥100K" label="100K"></option>
-    </datalist>
+      <label for="budget">What is your budget for this trip?<br>
+      <input type="range" min="0" max="1000" value="50" step="1" list="markers" id="budget" name="budget"></label>
+      <output id="budgetOutput"></output>
+      <datalist id="markers">
+        <option value="¥0K" label="0K"></option>
+        <option value="¥25K" label="25K"></option>
+        <option value="¥50K" label="50K"></option>
+        <option value="¥75K" label="75K"></option>
+        <option value="¥100K" label="100K"></option>
+      </datalist>
     </div>
 
     <div class="form-devition">
@@ -342,12 +210,14 @@
     <input type="submit" value="Make a plan!">
   </form>
 
-  <script class="select2">
+  <script class="select2"  type="text/javascript">
     $(document).ready(function() {
         $('.select_search').select2();
     });
   </script>
-  <script class="range" type="text/javascript">
+  <script type="text/javascript">
+    // range
+    // <output>の値がinputの値の変更とともに変化するようにしている
     const range=document.querySelector("#budget");
     const output=document.querySelector("#budgetOutput");
 
@@ -361,6 +231,43 @@
     range.addEventListener("input",function(){
       setOutput(range,output);
     });
+
+    // checkbox
+    // APIのmaxトークンの関係上checkboxの選択可能数を最大3に設定する
+    function limitCheckbox(group) {
+      const limit = 3;
+      let checkedCount = 0;
+      const boxes = group.querySelectorAll("input");
+      for(let box of boxes) {
+        box.addEventListener("click", function(){
+          if(box.checked){
+            checkedCount += 1;
+            if(checkedCount == limit){
+            disableCheckbox(boxes);
+            }
+          }else{
+            checkedCount -= 1;
+            enableCheckbox(boxes);
+          }
+        });
+      }
+    }
+
+    function disableCheckbox(boxes) {
+      for(let box of boxes){
+        if(!box.checked){
+          box.disabled = true;
+        }
+      }
+    }
+    function enableCheckbox(boxes) {
+      for(let box of boxes){
+          box.disabled = false;
+      }
+    }
+
+    limitCheckbox(checkboxgroup1);
+    limitCheckbox(checkboxgroup2);
   </script>
 </body>
 </html>
