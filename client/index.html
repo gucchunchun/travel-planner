@@ -5,15 +5,17 @@
   <meta charset="utf-8" />
   <meta lang="en"/>
   <link href="/css/select2.min.css" rel="stylesheet" />
+  <link href="/css/index.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="/js/select2.min.js"></script>
-  <script src="/js/getResponse.js"></script>
+  <script src="/js/main.js"></script>
 </head>
 <body>
   <h1>Travel Planner</h1>
-  <form id="formElem" onsubmit="onSubmit(event)">
-    <!-- can get current place from system? -->
-    <div class="form-devition">
+  <section id="userInput">
+    <form id="formElem" onsubmit="onSubmit(event)">
+      <!-- can get current place from system? -->
+      <div class="form-devition">
     <label for="prefecture-select">Which prefecture are you departing from?</label>
     <select class="select_search" id="prefecture-select" name="departPrefecture">
       <option value="">Select a prefecture</option>
@@ -65,8 +67,8 @@
       <option value="kagoshima">Kagoshima</option>
       <option value="okinawa">Okinawa</option>
     </select>
-    </div>
-    <div class="form-devition" id="checkboxgroup1">
+      </div>
+      <div class="form-devition" id="checkboxgroup1">
     <p>What is your ideal travel destination like?</p>
       <label>
           <input type="checkbox" name="destinationIsLike" value="serene"> Serene
@@ -114,8 +116,8 @@
       <label>
           <input type="checkbox" name="destinationIsLike" value="majestic"> Majestic
       </label>
-    </div>
-    <div class="form-devition" id="checkboxgroup2">
+      </div>
+      <div class="form-devition" id="checkboxgroup2">
       <p>What activities do you want to do?</p>
       <label>
         <input type="checkbox" name="activity" value="sightseeing"> Sightseeing
@@ -162,34 +164,34 @@
       <label>
         <input type="checkbox" name="activity" value="outdoor"> Outdoor activities
       </label>
-    </div>
-    <div class="form-devition">
-    <p>How long will your trip be?</p>
-    <label>
+      </div>
+      <div class="form-devition">
+      <p>How long will your trip be?</p>
+      <label>
         <input type="radio" name="trip-duration" value="1-3days"> Short (1-3 days)
-    </label>
-    <label>
+      </label>
+      <label>
         <input type="radio" name="trip-duration" value="4-7days"> Medium (4-7 days)
-    </label>
-    <label>
-        <input type="radio" name="trip-duration" value="morethan8days"> Long (8+ days)
-    </label>
-    </div>
+      </label>
+      <label>
+          <input type="radio" name="trip-duration" value="morethan8days"> Long (8+ days)
+      </label>
+      </div>
 
-    <div class="form-devition">
-      <label for="budget">What is your budget for this trip?<br>
-      <input type="range" min="0" max="100" value="50" step="1" list="markers" id="budget" name="budget"></label>
-      <output id="budgetOutput"></output>
-      <datalist id="markers">
-        <option value="¥0K" label="0K"></option>
-        <option value="¥25K" label="25K"></option>
-        <option value="¥50K" label="50K"></option>
-        <option value="¥75K" label="75K"></option>
-        <option value="¥100K" label="100K"></option>
-      </datalist>
-    </div>
+      <div class="form-devition">
+        <label for="budget">What is your budget for this trip?<br>
+        <input type="range" min="0" max="100" value="50" step="1" list="markers" id="budget" name="budget"></label>
+        <output id="budgetOutput"></output>
+        <datalist id="markers">
+          <option value="¥0K" label="0K"></option>
+          <option value="¥25K" label="25K"></option>
+          <option value="¥50K" label="50K"></option>
+          <option value="¥75K" label="75K"></option>
+          <option value="¥100K" label="100K"></option>
+        </datalist>
+      </div>
 
-    <div class="form-devition">
+      <div class="form-devition">
     <p>Will you be traveling alone or with others?</p>
     <label>
       <input type="checkbox" name="travel-companions" value="alone"> Alone
@@ -206,9 +208,12 @@
     <label>
       <input type="checkbox" name="travel-companions" value="other"> Other
     </label><br>
-    </div>
-    <input type="submit" value="Make a plan!">
-  </form>
+      </div>
+      <input type="submit" value="Make a plan!">
+    </form>
+  </section>
+  <secetion id="madePlan">
+  </secetion>
 
   <script class="select2"  type="text/javascript">
     $(document).ready(function() {

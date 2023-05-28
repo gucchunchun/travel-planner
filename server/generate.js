@@ -9,9 +9,21 @@ const generate = async(conditionsJSON) => {
   }
   const response = await openaiClient.createCompletion({
     model: "text-davinci-003",
-    prompt: conditions + `Suggest an geographically efficienttravel plan of Japan with above conditions. Response should be JSON formatted with Key of day number. For each values, make a array with keys(visiting-city, visiting-place, trasnportation, transport-fee, transport-time, what-to-do, typical-food). what-to-do value should be a array of activities name and the costs`,
-    max_tokens: 3500,
-    temperature: 0.4,
+    prompt: `Suggest a geographically efficient travel plan of Japan with the following conditions:,
+      "The departure point is the prefectural capital of the chosen prefecture.",
+      "The response should be JSON-formatted with keys in the format 'DAY {day number}'.",
+      "For each day, create keys with visiting places' names in the itinerary order.",
+      "Use the place names as keys, and the values should be an object with the following keys:",
+      "- 'transportation': The mode of transportation",
+      "- 'transportFee': The transport fee in Japanese yen",
+      "- 'transportTime': The estimated travel time",
+      "- 'shortDescriptionOfExperienceThere': A brief description of the experience at the place",
+      "- 'famousFood': An array of famous foods at the place",
+      "The transport fee and time should be calculated from the previous suggested place except for the first place.",
+      "The costs should be calculated in Japanese yen and should not include the unit.
+      "Conditions:"` + conditions,
+    max_tokens: 3000,
+    temperature: 0,
   })
 
   return response.data.choices[0].text;
