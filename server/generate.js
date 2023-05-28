@@ -19,8 +19,8 @@ const generate = async(conditionsJSON) => {
       "- 'transportTime': The estimated travel time",
       "- 'shortDescriptionOfExperienceThere': A brief description of the experience at the place",
       "- 'famousFood': An array of famous foods at the place",
-      "The transport fee and time should be calculated from the previous suggested place except for the first place.",
-      "The costs should be calculated in Japanese yen and should not include the unit.
+      "The transport fee and time should be calculated from the previous suggested place except for the first place and should include the unit",
+      "The costs should be calculated in Japanese yen and should include the unit.
       "Conditions:"` + conditions,
     max_tokens: 3000,
     temperature: 0,

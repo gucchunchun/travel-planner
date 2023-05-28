@@ -38,6 +38,9 @@ const generateResponse = async()=>{
 }
 
 function showResponse(response) {
+    userInput.classList.add('hidden');
+    submitButton.classList.add('hidden');
+    madePlan.classList.remove('hidden');
     const data = JSON.parse(response);
     console.log(data);
     const days = Object.keys(data).length;
@@ -56,23 +59,19 @@ function showResponse(response) {
         console.log(dayNum);
 
         // 場所ごとのプランが自動で振り分けられたindexにそれぞれ格納されている
-        const plansArray = data[dayNum];
-        const plansIndex = Object.keys(plansArray);
-        for (let index in plansIndex) {
-            // ある場所のプランが格納
-            const plan = data[dayNum][index];
+        const plans = data[dayNum]; 
+        for (let k=0; k < Object.keys(plans).length; k++) {
             const planDiv = document.createElement('div');
             planDiv.classList.add("plan");
             section.appendChild(planDiv);
 
-            // 一つしか格納されていないはずなのでindex[0]のkey=場所の名前
-            const placeName = Object.keys(plan)[0];
+            const placeName = Object.keys(plans)[k];
             const h6 = document.createElement('h6');
-            h6.innerHTML = (Number(index)+1) + ", " + placeName;
+            h6.innerHTML = (k+1) + ", " + placeName;
             h6.classList.add("location");
             planDiv.appendChild(h6);
 
-            const planDetail = plan[placeName];
+            const planDetail = plans[placeName];
 
             const trasnportationDiv = document.createElement('div');
             trasnportationDiv.classList.add('trasnportation');

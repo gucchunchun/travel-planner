@@ -1,11 +1,116 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+/* base setting */
+h1 {
+    font-size: 7.5rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 5.3rem;
+    font-weight: bold;
+}
+h3 {
+    font-size: 3.8rem;
+    font-weight: 400;
+}
+h4 {
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+h5 {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+h6 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+p {
+    font-size: 1.4rem;
+}
+:root {
+    --backgroundColor: #FFFDF9;
+    --mainColor: #E54A3C;
+    --secondaryColor: #189899;
+    --errorColor: #F8BA58;
+    --blackColour: #232725;
+}
+  
+*, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-section {
+body {
+    width: 100%;
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--backgroundColor);
+}
+header {
+    width: 100%;
+    height: 8.75rem;
+    margin-bottom: 1.5rem;
+}
+header h1 {
+    width: 49.875rem;
+    height: 100%;
+    margin-left: 4.5rem;
+    color: var(--mainColor);
+}
+main {
+    display: flex;
+    justify-content: center;
+    padding: 0 4.5rem;
+}
+.halfScreen {
     width: 50%;
 }
 
 #userInput {
-    /* display: none; */
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+.form-devition {
+    width: 100%;
+}
+.question {
+    font-size: 1.9rem;
+    width: 100%;
+}
+select{
+    width: 50%;
+}
+.hidden {
+    display: none !important; 
+}
+input[type="range"] {
+    width: 50%;
+}
+
+#submitSpace {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#submitSpace img {
+    height: 36.5rem;
+}
+#submitSpace img::before {
+ /* make flag */
+}
+#submitSpace img::after {
+ /* make flag */
+}
+input[type="submit"] {
+    width: 20rem;
+    height: 4.5rem;
+    color: var(--backgroundColor);
+    font-size: 2.7rem;
+    font-weight: bold;
+    background-color: var(--secondaryColor);
+    border-radius: 1rem;
+}
+

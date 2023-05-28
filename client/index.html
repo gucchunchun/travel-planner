@@ -1,238 +1,247 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Travel Planner /World var.</title>
   <meta charset="utf-8" />
-  <meta lang="en"/>
+  <meta lang="en" />
   <link href="/css/select2.min.css" rel="stylesheet" />
   <link href="/css/index.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="/js/select2.min.js"></script>
   <script src="/js/main.js"></script>
 </head>
+
 <body>
-  <h1>Travel Planner</h1>
-  <section id="userInput">
-    <form id="formElem" onsubmit="onSubmit(event)">
-      <!-- can get current place from system? -->
-      <div class="form-devition">
-    <label for="prefecture-select">Which prefecture are you departing from?</label>
-    <select class="select_search" id="prefecture-select" name="departPrefecture">
-      <option value="">Select a prefecture</option>
-      <option value="hokkaido">Hokkaido</option>
-      <option value="aomori">Aomori</option>
-      <option value="iwate">Iwate</option>
-      <option value="miyagi">Miyagi</option>
-      <option value="akita">Akita</option>
-      <option value="yamagata">Yamagata</option>
-      <option value="fukushima">Fukushima</option>
-      <option value="ibaraki">Ibaraki</option>
-      <option value="tochigi">Tochigi</option>
-      <option value="gunma">Gunma</option>
-      <option value="saitama">Saitama</option>
-      <option value="chiba">Chiba</option>
-      <option value="tokyo">Tokyo</option>
-      <option value="kanagawa">Kanagawa</option>
-      <option value="niigata">Niigata</option>
-      <option value="toyama">Toyama</option>
-      <option value="ishikawa">Ishikawa</option>
-      <option value="fukui">Fukui</option>
-      <option value="yamanashi">Yamanashi</option>
-      <option value="nagano">Nagano</option>
-      <option value="gifu">Gifu</option>
-      <option value="shizuoka">Shizuoka</option>
-      <option value="aichi">Aichi</option>
-      <option value="mie">Mie</option>
-      <option value="shiga">Shiga</option>
-      <option value="kyoto">Kyoto</option>
-      <option value="osaka">Osaka</option>
-      <option value="hyogo">Hyogo</option>
-      <option value="nara">Nara</option>
-      <option value="wakayama">Wakayama</option>
-      <option value="tottori">Tottori</option>
-      <option value="shimane">Shimane</option>
-      <option value="okayama">Okayama</option>
-      <option value="hiroshima">Hiroshima</option>
-      <option value="yamaguchi">Yamaguchi</option>
-      <option value="tokushima">Tokushima</option>
-      <option value="kagawa">Kagawa</option>
-      <option value="ehime">Ehime</option>
-      <option value="kochi">Kochi</option>
-      <option value="fukuoka">Fukuoka</option>
-      <option value="saga">Saga</option>
-      <option value="nagasaki">Nagasaki</option>
-      <option value="kumamoto">Kumamoto</option>
-      <option value="oita">Oita</option>
-      <option value="miyazaki">Miyazaki</option>
-      <option value="kagoshima">Kagoshima</option>
-      <option value="okinawa">Okinawa</option>
-    </select>
-      </div>
-      <div class="form-devition" id="checkboxgroup1">
-    <p>What is your ideal travel destination like?</p>
-      <label>
+  <header>
+    <h1>Travel Planner</h1>
+  </header>
+  <main>
+    <section class="halfScreen" id="userInput">
+      <form id="inputForm" onsubmit="onSubmit(event)">
+        <!-- can get current place from system? -->
+        <div class="form-devition">
+          <label class="question" for="prefecture-select">Which prefecture are you departing from?</label>
+          <select class="select_search" id="prefecture-select" name="departPrefecture">
+            <option value="">Select a prefecture</option>
+            <option value="hokkaido">Hokkaido</option>
+            <option value="aomori">Aomori</option>
+            <option value="iwate">Iwate</option>
+            <option value="miyagi">Miyagi</option>
+            <option value="akita">Akita</option>
+            <option value="yamagata">Yamagata</option>
+            <option value="fukushima">Fukushima</option>
+            <option value="ibaraki">Ibaraki</option>
+            <option value="tochigi">Tochigi</option>
+            <option value="gunma">Gunma</option>
+            <option value="saitama">Saitama</option>
+            <option value="chiba">Chiba</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="kanagawa">Kanagawa</option>
+            <option value="niigata">Niigata</option>
+            <option value="toyama">Toyama</option>
+            <option value="ishikawa">Ishikawa</option>
+            <option value="fukui">Fukui</option>
+            <option value="yamanashi">Yamanashi</option>
+            <option value="nagano">Nagano</option>
+            <option value="gifu">Gifu</option>
+            <option value="shizuoka">Shizuoka</option>
+            <option value="aichi">Aichi</option>
+            <option value="mie">Mie</option>
+            <option value="shiga">Shiga</option>
+            <option value="kyoto">Kyoto</option>
+            <option value="osaka">Osaka</option>
+            <option value="hyogo">Hyogo</option>
+            <option value="nara">Nara</option>
+            <option value="wakayama">Wakayama</option>
+            <option value="tottori">Tottori</option>
+            <option value="shimane">Shimane</option>
+            <option value="okayama">Okayama</option>
+            <option value="hiroshima">Hiroshima</option>
+            <option value="yamaguchi">Yamaguchi</option>
+            <option value="tokushima">Tokushima</option>
+            <option value="kagawa">Kagawa</option>
+            <option value="ehime">Ehime</option>
+            <option value="kochi">Kochi</option>
+            <option value="fukuoka">Fukuoka</option>
+            <option value="saga">Saga</option>
+            <option value="nagasaki">Nagasaki</option>
+            <option value="kumamoto">Kumamoto</option>
+            <option value="oita">Oita</option>
+            <option value="miyazaki">Miyazaki</option>
+            <option value="kagoshima">Kagoshima</option>
+            <option value="okinawa">Okinawa</option>
+          </select>
+        </div>
+        <div class="form-devition" id="checkboxgroup1">
+        <p class="question">What is your ideal travel destination like?</p>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="serene"> Serene
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="adventurous"> Adventurous
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="vibrant"> Vibrant
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="exotic"> Exotic
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="picturesque"> Picturesque
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="lively"> Lively
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="scenic"> Scenic
-      </label>
-      <br>
-      <label>
+        </label>
+        <br>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="charming"> Charming
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="tranquil"> Tranquil
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="cultural"> Cultural
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="historic"> Historic
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="coastal"> Coastal
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="thrilling"> Thrilling
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="remote"> Remote
-      </label>
-      <label>
+        </label>
+        <label>
           <input type="checkbox" name="destinationIsLike" value="majestic"> Majestic
-      </label>
-      </div>
-      <div class="form-devition" id="checkboxgroup2">
-      <p>What activities do you want to do?</p>
-      <label>
-        <input type="checkbox" name="activity" value="sightseeing"> Sightseeing
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="hiking"> Hiking
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="beach"> Beach activities
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="cultural"> Cultural experiences
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="food"> Food and culinary exploration
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="adventureSports"> Adventure sports
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="shopping"> Shopping
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="relaxation"> Relaxation and spa
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="wildlife"> Wildlife and nature exploration
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="historicalTours"> Historical tours
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="waterSports"> Water sports
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="photography"> Photography and scenic views
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="festivals"> Attend local festivals/events
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="museums"> Visit museums and art galleries
-      </label>
-      <label>
-        <input type="checkbox" name="activity" value="outdoor"> Outdoor activities
-      </label>
-      </div>
-      <div class="form-devition">
-      <p>How long will your trip be?</p>
-      <label>
-        <input type="radio" name="trip-duration" value="1-3days"> Short (1-3 days)
-      </label>
-      <label>
-        <input type="radio" name="trip-duration" value="4-7days"> Medium (4-7 days)
-      </label>
-      <label>
-          <input type="radio" name="trip-duration" value="morethan8days"> Long (8+ days)
-      </label>
-      </div>
+        </label>
+        </div>
+        <div class="form-devition" id="checkboxgroup2">
+          <p class="question">What activities do you want to do?</p>
+          <label>
+            <input type="checkbox" name="activity" value="sightseeing"> Sightseeing
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="hiking"> Hiking
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="beach"> Beach activities
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="cultural"> Cultural experiences
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="food"> Food and culinary exploration
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="adventureSports"> Adventure sports
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="shopping"> Shopping
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="relaxation"> Relaxation and spa
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="wildlife"> Wildlife and nature exploration
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="historicalTours"> Historical tours
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="waterSports"> Water sports
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="photography"> Photography and scenic views
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="festivals"> Attend local festivals/events
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="museums"> Visit museums and art galleries
+          </label>
+          <label>
+            <input type="checkbox" name="activity" value="outdoor"> Outdoor activities
+          </label>
+        </div>
+        <div class="form-devition">
+          <p class="question">How long will your trip be?</p>
+          <label>
+            <input type="radio" name="trip-duration" value="1-3days"> Short (1-3 days)
+          </label>
+          <label>
+            <input type="radio" name="trip-duration" value="4-7days"> Medium (4-7 days)
+          </label>
+          <label>
+            <input type="radio" name="trip-duration" value="morethan8days"> Long (8+ days)
+          </label>
+        </div>
+        <div class="form-devition">
+          <label class="question" for="budget">What is your budget for this trip?<br>
+            <input type="range" min="0" max="100" value="50" step="1" list="markers" id="budget" name="budget"></label>
+          <output id="budgetOutput"></output>
+          <datalist id="markers">
+            <option value="¥0K" label="0K"></option>
+            <option value="¥25K" label="25K"></option>
+            <option value="¥50K" label="50K"></option>
+            <option value="¥75K" label="75K"></option>
+            <option value="¥100K" label="100K"></option>
+          </datalist>
+        </div>
 
-      <div class="form-devition">
-        <label for="budget">What is your budget for this trip?<br>
-        <input type="range" min="0" max="100" value="50" step="1" list="markers" id="budget" name="budget"></label>
-        <output id="budgetOutput"></output>
-        <datalist id="markers">
-          <option value="¥0K" label="0K"></option>
-          <option value="¥25K" label="25K"></option>
-          <option value="¥50K" label="50K"></option>
-          <option value="¥75K" label="75K"></option>
-          <option value="¥100K" label="100K"></option>
-        </datalist>
-      </div>
+        <div class="form-devition">
+          <p class="question">Will you be traveling alone or with others?</p>
+          <label>
+            <input type="radio" name="travel-companions" value="alone"> Alone
+          </label>
+          <label>
+            <input type="radio" name="travel-companions" value="friends"> With friends
+          </label>
+          <label>
+            <input type="radio" name="travel-companions" value="family"> With family
+          </label>
+          <label>
+            <input type="radio" name="travel-companions" value="partner"> With partner
+          </label>
+          <label>
+            <input type="radio" name="travel-companions" value="other"> Other
+          </label>
+        </div>
+      </form>
+    </section>
+    <section class="halfScreen" id="submitSpace">
+      <img src="/img/nihonchizu.png" alt="picture of Japan map" />
+      <input type="submit" value="Make a Plan!" form="inputForm" id="submitButton"/>
+    </section>
+    <secetion class="halfScreen hidden" id="madePlan">
+    </secetion>
+  </main>
 
-      <div class="form-devition">
-    <p>Will you be traveling alone or with others?</p>
-    <label>
-      <input type="checkbox" name="travel-companions" value="alone"> Alone
-    </label><br>
-    <label>
-      <input type="checkbox" name="travel-companions" value="friends"> With friends
-    </label><br>
-    <label>
-      <input type="checkbox" name="travel-companions" value="family"> With family
-    </label><br>
-    <label>
-      <input type="checkbox" name="travel-companions" value="partner"> With partner
-    </label><br>
-    <label>
-      <input type="checkbox" name="travel-companions" value="other"> Other
-    </label><br>
-      </div>
-      <input type="submit" value="Make a plan!">
-    </form>
-  </section>
-  <secetion id="madePlan">
-  </secetion>
 
-  <script class="select2"  type="text/javascript">
-    $(document).ready(function() {
-        $('.select_search').select2();
+  <script class="select2" type="text/javascript">
+    $(document).ready(function () {
+      $('.select_search').select2();
     });
   </script>
   <script type="text/javascript">
     // range
     // <output>の値がinputの値の変更とともに変化するようにしている
-    const range=document.querySelector("#budget");
-    const output=document.querySelector("#budgetOutput");
+    const range = document.querySelector("#budget");
+    const output = document.querySelector("#budgetOutput");
 
-    function setOutput(range,output) {
-      const value=range.value;
-      output.value="¥" +value + "K";
+    function setOutput(range, output) {
+      const value = range.value;
+      output.value = "¥" + value + "K";
     }
-    setOutput(range,output);
-    range.addEventListener("input",function(){
-      setOutput(range,output);
+    setOutput(range, output);
+    range.addEventListener("input", function () {
+      setOutput(range, output);
     });
 
     // checkbox
@@ -240,14 +249,14 @@
       const limit = 5;
       let checkedCount = 0;
       const boxes = group.querySelectorAll("input");
-      for(let box of boxes) {
-        box.addEventListener("click", function(){
-          if(box.checked){
+      for (let box of boxes) {
+        box.addEventListener("click", function () {
+          if (box.checked) {
             checkedCount += 1;
-            if(checkedCount == limit){
-            disableCheckbox(boxes);
+            if (checkedCount == limit) {
+              disableCheckbox(boxes);
             }
-          }else{
+          } else {
             checkedCount -= 1;
             enableCheckbox(boxes);
           }
@@ -256,15 +265,15 @@
     }
 
     function disableCheckbox(boxes) {
-      for(let box of boxes){
-        if(!box.checked){
+      for (let box of boxes) {
+        if (!box.checked) {
           box.disabled = true;
         }
       }
     }
     function enableCheckbox(boxes) {
-      for(let box of boxes){
-          box.disabled = false;
+      for (let box of boxes) {
+        box.disabled = false;
       }
     }
 
@@ -272,4 +281,5 @@
     limitCheckbox(checkboxgroup2);
   </script>
 </body>
+
 </html>
