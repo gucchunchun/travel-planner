@@ -115,17 +115,19 @@ function showResponse(response) {
                         descriptionDiv.innerHTML =  listContents;
                         break;
                     case "famousFood":
-                        foodDiv.innerHTML += "Famous food: ";
-                        for(let food of listContents) {
-                            const foodSpan = document.createElement("span");
-                            foodSpan.innerHTML = food + ", ";
-                            // flickerAPIとコネクトしてfoodの写真表示ができるようにする？
-                            foodSpan.classList.add("foodName");
-                            foodSpan.id = food;
-                            foodDiv.appendChild(foodSpan);
+                        if(listContents.length > 0){
+                            foodDiv.innerHTML += "Famous food: ";
+                            for(let food of listContents) {
+                                const foodSpan = document.createElement("span");
+                                foodSpan.innerHTML = food + ", ";
+                                // flickerAPIとコネクトしてfoodの写真表示ができるようにする？
+                                foodSpan.classList.add("foodName");
+                                foodSpan.id = food;
+                                foodDiv.appendChild(foodSpan);
+                            }
+                            temp = foodDiv.lastChild.innerHTML;
+                            foodDiv.lastChild.innerHTML= temp.replace(", ","");
                         }
-                        temp = foodDiv.lastChild.innerHTML;
-                        foodDiv.lastChild.innerHTML= temp.replace(", ","");
                         break;
                 }
             }
