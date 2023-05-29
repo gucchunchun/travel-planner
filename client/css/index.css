@@ -34,6 +34,7 @@ p {
     --secondaryColor: #189899;
     --errorColor: #F8BA58;
     --blackColour: #232725;
+    --blackColourRgb: 35,39,37;
 }
   
 *, *::before, *::after {
@@ -64,6 +65,7 @@ main {
 }
 .halfScreen {
     width: 50%;
+    position:relative;
 }
 
 #userInput {
@@ -91,18 +93,35 @@ input[type="range"] {
 
 #submitSpace {
     display: flex;
+    height: 40rem;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 #submitSpace img {
-    height: 36.5rem;
+    height: 35rem;
 }
-#submitSpace img::before {
- /* make flag */
+#submitSpace::before {
+    content: "";
+    width:10rem;
+    height: 6.5rem;
+    border: solid 0.1875rem rgba(var(--blackColourRgb), 0.5);
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%) rotate(-14deg);
+    left: 12.5rem;
+    top: 10rem;
 }
-#submitSpace img::after {
- /* make flag */
+#submitSpace::after {
+    content: "";
+    width: 4.2rem;
+    height: 4.2rem;
+    border: solid 0.1rem rgba(var(--blackColourRgb), 0.5);
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%) rotate(-14deg);
+    left: 12.5rem;
+    top: 10rem;
 }
 input[type="submit"] {
     width: 20rem;
@@ -114,3 +133,17 @@ input[type="submit"] {
     border-radius: 1rem;
 }
 
+#conditionsBox {
+    position:absolute;
+    top: 0;
+    left:0;
+}
+#loadingMessage {
+    position:absolute;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+}
+/* animation */
+/* loading */
+/* flicker if there is time */

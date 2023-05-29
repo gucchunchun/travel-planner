@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Travel Planner /World var.</title>
+  <title>Travel Planner </title>
   <meta charset="utf-8" />
   <meta lang="en" />
   <link href="/css/select2.min.css" rel="stylesheet" />
@@ -218,8 +218,12 @@
     <section class="halfScreen" id="submitSpace">
       <img src="/img/nihonchizu.png" alt="picture of Japan map" />
       <input type="submit" value="Make a Plan!" form="inputForm" id="submitButton"/>
+      <div class="hidden" id="conditionsBox">
+        <h6>Your selections:</h6>
+      </div>
     </section>
     <secetion class="halfScreen hidden" id="madePlan">
+      <h5 id="loadingMessage">Making your plan...</h5>
     </secetion>
   </main>
 
@@ -279,6 +283,8 @@
 
     limitCheckbox(checkboxgroup1);
     limitCheckbox(checkboxgroup2);
+
+    // 一つでも条件の記入があれば
   </script>
 </body>
 
