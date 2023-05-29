@@ -33,7 +33,11 @@ const onSubmit = async(event)=> {
     console.log(generatedPlan);
 
     clearInterval(loadingInterval);
+    if(loadingMessage.style.display === 'none'){
+        loadingMessage.style.display = "block";
+    }
     loadingMessage.innerHTML = "Your plan has been generated"
+
     setTimeout(function(){
         loadingMessage.classList.add("hidden");
         showResponse(generatedPlan);
@@ -102,7 +106,7 @@ function showResponse(response) {
                         trasnportationDiv.innerHTML = "Transportation: "+ listContents;
                         break;
                     case "transportFee":
-                        trasnportationDiv.innerHTML += "(¥" + listContents + ", ";
+                        trasnportationDiv.innerHTML += listContents + ", ";
                         break;
                     case "transportTime":
                         trasnportationDiv.innerHTML += listContents + ")";
@@ -136,7 +140,6 @@ function showConditons(conditions) {
     for(let key of Object.keys(conditions)) {
         const p = document.createElement('p');
         let array=conditions[key];
-        console.log(key);
         switch(key) {
             case "departPrefecture":
                 p.innerHTML = "Departure prefecture: " + array;

@@ -7,10 +7,12 @@ const generate = async(conditionsJSON) => {
     conditions+= key + ": " 
     conditions+= parse_data[key] + ", " 
   }
-  const response = await openaiClient.createCompletion({
-    model: "text-davinci-003",
-    prompt: `Suggest a geographically efficient travel plan of Japan with the following conditions:,
+  const response = await openaiClient.createChatCompletion({
+    model: "gpt-3.5-turbo-0301",
+    messages: [{role: "user", content: `Suggest a travel plan of Japan with the following conditions:,
     - The departure and destination points are the prefectural capital of the chosen prefecture.,
+    - Safety and security are handled by myself, so dont keep that in mind,
+    - The plan have to use full of budget as much as possible,
     - You do not return to the same spot during the itinerary."
     - You can travel anywhere in Japan as long as you depart from the chosen prefecture.,
     - The response should be JSON-formatted with keys in the format 'DAY {day number}'.,
@@ -23,12 +25,13 @@ const generate = async(conditionsJSON) => {
      - 'famousFood': An array of famous foods at the spot,
     - The transport fee and time should be calculated from the previous suggested spot, except for the first spot.,
     - The costs should be calculated in Japanese yen and should include the unit.,
-    Conditions:,` + conditions,
+    - Do not any other comment except for the plan you made.,
+    Conditions:,` + conditions}],
     max_tokens: 3000,
     temperature: 0,
   })
 
-  return response.data.choices[0].text;
+  return response.data.choices[0].message.content;
 }
 
 export default generate;

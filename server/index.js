@@ -29,7 +29,7 @@ app.post("/planner", async(req, res) => {
         // APIからのレスポンスを送信する
         res.json({response: response});
     }catch (error) {
-        console.log(error.response.data.error);
+        console.log(error);
         res.status(500).send("Internal Server Error");
     }
 })
