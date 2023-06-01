@@ -7,7 +7,6 @@ const onSubmit = async(event)=> {
     madePlan.classList.remove('hidden');
     conditionsBox.classList.remove('hidden');
     disappearFlag();
-    const loadingInterval = setInterval(toggleLoading,1000);
 
     const formData = new FormData(event.target);
     let prev
@@ -32,10 +31,7 @@ const onSubmit = async(event)=> {
     const generatedPlan = await generateResponse(conditions);
     console.log(generatedPlan);
 
-    clearInterval(loadingInterval);
-    if(loadingMessage.style.display === 'none'){
-        loadingMessage.style.display = "block";
-    }
+
     loadingMessage.innerHTML = "Your plan has been generated"
 
     setTimeout(function(){

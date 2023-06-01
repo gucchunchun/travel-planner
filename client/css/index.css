@@ -87,6 +87,7 @@ select{
 .hidden {
     display: none !important; 
 }
+
 input[type="range"] {
     width: 50%;
 }
@@ -141,9 +142,104 @@ input[type="submit"] {
 #loadingMessage {
     position:absolute;
     transform: translateX(-50%) translateY(-50%);
+    width:fit-content;
     top: 50%;
     left: 50%;
 }
+.bound {
+    position: relative;
+    display: inline-block;
+    animation: bound 5s linear infinite;
+}
 /* animation */
+.bound:nth-of-type(1){
+    animation-delay: 0s;
+}
+.bound:nth-of-type(2){
+    animation-delay: 50ms;
+}
+.bound:nth-of-type(3){
+    animation-delay: 100ms;
+}
+.bound:nth-of-type(4){
+    animation-delay: 150ms;
+}
+.bound:nth-of-type(5){
+    animation-delay: 200ms;
+}
+.bound:nth-of-type(6){
+    animation-delay: 250ms;
+}
+.bound:nth-of-type(8){
+    animation-delay: 300ms;
+}
+.bound:nth-of-type(9){
+    animation-delay: 350ms;
+}
+.bound:nth-of-type(10){
+    animation-delay: 400ms;
+}
+.bound:nth-of-type(11){
+    animation-delay: 450ms;
+}
+.bound:nth-of-type(13){
+    animation-delay: 500ms;
+}
+.bound:nth-of-type(14){
+    animation-delay: 550ms;
+}
+.bound:nth-of-type(15){
+    animation-delay: 600ms;
+}
+.bound:nth-of-type(16){
+    animation-delay: 650ms;
+}
+/* nthはclass中心ではなく、親要素内の何番目と言うところが肝になる */
+#dot1{
+    animation: dot1 5s linear infinite;
+}
+#dot2{
+    animation: dot2 5s linear infinite;
+}
+#dot3{
+    animation: dot3 5s linear infinite;
+}
+
+@keyframes bound {
+    0% {
+        transform: translateY(0px);
+    }
+    2.5% {
+        transform: translateY(-20px);
+    }
+    5%,100% {
+        transform: translateY(0px);
+    }
+
+}
+@keyframes dot1 {
+    0%,24%{
+        opacity: 0;
+    }
+    25%,100% {
+        opacity: 1;
+    }
+}
+@keyframes dot2 {
+    0%,44%{
+        opacity: 0;
+    }
+    45%,100% {
+        opacity: 1;
+    }
+}
+@keyframes dot3 {
+    0%,64%{
+        opacity: 0;
+    }
+    65%,100% {
+        opacity: 1;
+    }
+}
 /* loading */
 /* flicker if there is time */
